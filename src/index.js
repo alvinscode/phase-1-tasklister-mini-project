@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelector("#create-task-form").addEventListener('submit', (e) => {
+  let form = document.querySelector("#create-task-form")
+    form.addEventListener('submit', (e) => {
     e.preventDefault()
     buildToDo(e.target.new_task_description.value)
+    form.reset()
   })
 });
 
